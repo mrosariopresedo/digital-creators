@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* completar: font-family, font-size, background-color, color */
+}
+
+header {
+    /* completar: background-color, color, padding */
+}
+
+header h1 {
+    /* completar: font-size, font-family */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    /* completar: margin o padding entre items */
+}
+
+nav ul li a {
+    /* completar: color, font-family, font-size */
+}
+
+main {
+    /* completar: padding, margin */
+}
+
+main h1 {
+    /* completar: font-size, font-family, color, margin-bottom */
+}
+
+main h2 {
+    /* completar: font-size, font-family, color, margin-bottom */
+}
+
+main p {
+    /* completar: color, font-size, margin-bottom */
+}
+
+main ul {
+    list-style: none;
+    /* completar: padding, margin */
+}
+
+main ul li {
+    /* completar: margin-bottom */
+}
+
+main ul li a {
+    /* completar: color */
+}
+
+footer {
+    /* completar: background-color, color, padding, text-align */
+}
