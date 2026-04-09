@@ -83,7 +83,8 @@ main p {
 }
 
 main ul {
-    list-style: none;
+    list-style-type: disc;
+    padding-left: 20px;
     margin-bottom: 24px;
 }
 
