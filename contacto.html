@@ -2,35 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Digital Creators</title>
   <link rel="stylesheet" href="estilos/style.css">
 </head>
 
 <body>
 
 <header>
-  <div>
-    <h1>Digital Creators</h1>
-    <nav>
-        <ul>
-         <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-         <li><a href="proyectos.html">Proyectos</a></li>
-         <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-  </div>
+  <p class="logo">Digital Creators</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-  <div>
-    <h2>Contactanos</h2>
-    <p>
-      ¿Tenés un proyecto en mente? Nos encantaría escucharte. Completá el formulario 
-      de contacto o escribinos directamente a hola@digitalcreators.com y te 
-      responderemos en menos de 24 horas.
-    </p>
-  </div>
+  <h1>Contactanos</h1>
+  <p>¿Tenés un proyecto en mente? Nos encantaría escucharte. Completá el formulario de contacto o escribinos directamente a hola@digitalcreators.com y te responderemos en menos de 24 horas.</p>
+
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
 </main>
 
 <footer>
