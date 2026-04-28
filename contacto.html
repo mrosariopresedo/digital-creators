@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Digital Creators</title>
+  <meta name="description" content="Contactá al equipo de Nexo Studio. Completá el formulario y te respondemos en menos de 24 horas.">
+  <title>Contacto | Nexo Studio</title>
+  <link rel="icon" type="image/png" href="img/isotipo.png">
   <link rel="stylesheet" href="estilos/style.css">
 </head>
 
 <body>
 
 <header>
-  <p class="logo">Digital Creators</p>
+  <a href="index.html" class="logo-link">
+    <img src="img/imagotipo.png" class="logo-img" alt="Nexo Studio">
+  </a>
   <button class="hamburger" id="hamburger" aria-label="Abrir menú">&#9776;</button>
   <nav id="nav-menu">
     <ul>
@@ -24,24 +28,25 @@
 
 <main>
   <h1>Contactanos</h1>
-  <p>¿Tenés un proyecto en mente? Nos encantaría escucharte. Completá el formulario de contacto o escribinos directamente a hola@digitalcreators.com y te responderemos en menos de 24 horas.</p>
+  <p>¿Tenés un proyecto en mente? Nos encantaría escucharte. Completá el formulario de contacto o escribinos directamente a hola@nexostudio.com y te responderemos en menos de 24 horas.</p>
 
   <form>
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre">
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+    <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
 
     <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje"></textarea>
+    <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu proyecto..." required></textarea>
 
     <button type="submit">Enviar</button>
   </form>
 </main>
 
 <footer>
-  <p>© 2026 Digital Creators. Todos los derechos reservados.</p>
+  <img src="img/isotipo.png" class="footer-isotipo" alt="Nexo Studio">
+  <p>© 2026 Nexo Studio. Todos los derechos reservados.</p>
 </footer>
 
   <script src="js/menu.js"></script>

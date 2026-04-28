@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 1 — Nexo Studio | Grupo 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #ffffff;
+      padding: 48px 64px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* --- Cover --- */
+    .cover {
+      border-bottom: 4px solid #ff6600;
+      padding-bottom: 24px;
+      margin-bottom: 36px;
+      font-size: 0;
+    }
+
+    .cover-logo {
+      display: inline-block;
+      vertical-align: middle;
+      height: 44px;
+      width: auto;
+      margin-right: 20px;
+    }
+
+    .cover-text {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 13px;
+    }
+
+    .cover-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #003366;
+    }
+
+    .cover-text p {
+      font-size: 12px;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* --- Section headings --- */
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #003366;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 4px solid #ff6600;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #003366;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    /* --- Tables --- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+
+    th {
+      background-color: #003366;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      padding: 9px 12px;
+      text-align: left;
+    }
+
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e8e8e8;
+      color: #333;
+      word-break: break-all;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f8f8f8;
+    }
+
+    a {
+      color: #003366;
+      text-decoration: none;
+    }
+
+    /* --- Info boxes --- */
+    .info-box {
+      background: #f0f4fa;
+      border-left: 4px solid #003366;
+      border-radius: 4px;
+      padding: 10px 16px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    .info-box strong {
+      font-family: 'Montserrat', sans-serif;
+      color: #003366;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    /* --- Mapa del sitio --- */
+    .mapa-container {
+      margin: 16px 0;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #fafafa;
+    }
+
+    .mapa-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* --- Document footer --- */
+    .doc-footer {
+      margin-top: 48px;
+      padding-top: 14px;
+      border-top: 2px solid #ff6600;
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- Print --- */
+    @media print {
+      body {
+        padding: 0;
+        font-size: 12px;
+      }
+
+      @page {
+        size: A4;
+        margin: 2cm 2.5cm;
+      }
+
+      h2 { break-before: avoid; }
+      table, .mapa-container, .info-box { break-inside: avoid; }
+      a { color: #003366; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <div class="cover">
+    <img src="img/imagotipo.png" class="cover-logo" alt="Nexo Studio">
+    <div class="cover-text">
+      <h1>Actividad 1 — Sitio web de consultora</h1>
+      <p>Diseño y Desarrollo Web · Comisión DDW1C26 · 2026</p>
+    </div>
+  </div>
+
+  <!-- 1. Datos del grupo -->
+  <h2>1. Datos del grupo</h2>
+  <table>
+    <tr><th>Campo</th><th>Detalle</th></tr>
+    <tr><td>Nombre de la consultora</td><td><strong>Nexo Studio</strong></td></tr>
+    <tr><td>Número de grupo</td><td>02</td></tr>
+    <tr><td>Comisión</td><td>DDW1C26</td></tr>
+  </table>
+  <table>
+    <tr><th>Apellido y nombre</th><th>Rol en el equipo</th></tr>
+    <tr><td>GAVILANES, Lucía</td><td>Diseñadora UI</td></tr>
+    <tr><td>MARTINS, Valentina</td><td>Diseñadora UX</td></tr>
+    <tr><td>PRESEDO VALENZUELA, María del Rosario</td><td>Desarrolladora Front-end</td></tr>
+    <tr><td>RAIMONDO, Mora</td><td>Marketing</td></tr>
+    <tr><td>SAMA, Martina Sol</td><td>Research / Investigación</td></tr>
+  </table>
+
+  <!-- 2. Links personales -->
+  <h2>2. Enlaces a páginas personales</h2>
+  <table>
+    <tr><th>Integrante</th><th>Portfolio personal (GitHub Pages)</th></tr>
+    <tr>
+      <td>Lucía Gavilanes</td>
+      <td><a href="https://luligavilanes.github.io/proyecto1jueves/">https://luligavilanes.github.io/proyecto1jueves/</a></td>
+    </tr>
+    <tr>
+      <td>Valentina Martins</td>
+      <td><a href="https://valmartins222.github.io/PROYECTO.P2/">https://valmartins222.github.io/PROYECTO.P2/</a></td>
+    </tr>
+    <tr>
+      <td>Rosario Presedo</td>
+      <td><a href="https://mrosariopresedo.github.io/desarrollo-web/tarea-3/">https://mrosariopresedo.github.io/desarrollo-web/tarea-3/</a></td>
+    </tr>
+    <tr>
+      <td>Mora Raimondo</td>
+      <td><a href="https://moraraimondo-cyber.github.io/proyecto1jueves/">https://moraraimondo-cyber.github.io/proyecto1jueves/</a></td>
+    </tr>
+    <tr>
+      <td>Martina Sama</td>
+      <td><a href="https://martinasama2005.github.io/proyecto1jueves/">https://martinasama2005.github.io/proyecto1jueves/</a></td>
+    </tr>
+  </table>
+
+  <!-- 3. Sitio de la consultora -->
+  <h2>3. Sitio web de la consultora</h2>
+  <div class="info-box">
+    <strong>Sitio publicado (GitHub Pages)</strong>
+    <a href="https://mrosariopresedo.github.io/digital-creators/">https://mrosariopresedo.github.io/digital-creators/</a>
+  </div>
+  <div class="info-box">
+    <strong>Repositorio (GitHub)</strong>
+    <a href="https://github.com/mrosariopresedo/digital-creators">https://github.com/mrosariopresedo/digital-creators</a>
+  </div>
+
+  <!-- 4. Mapa del sitio -->
+  <h2>4. Mapa del sitio</h2>
+  <div class="mapa-container">
+    <img src="img/mapa-sitio.svg" alt="Mapa del sitio de Nexo Studio">
+  </div>
+
+  <!-- 5. Descripción de páginas -->
+  <h2>5. Descripción de páginas</h2>
+
+  <h3>Inicio (index.html)</h3>
+  <p>Página principal de Nexo Studio. Presenta la propuesta de valor de la consultora y un acceso directo al formulario de contacto mediante un botón CTA. Incluye la sección <em>Portfolio del Equipo</em>, con una card por integrante que muestra foto, nombre, rol y enlace al portfolio personal publicado en GitHub Pages.</p>
+
+  <h3>Servicios (servicios.html)</h3>
+  <p>Describe los cuatro servicios que ofrece la consultora: <strong>Diseño UX/UI</strong>, <strong>Desarrollo Front-end</strong>, <strong>User Research</strong> y <strong>Marketing Digital</strong>. Cada servicio se presenta en una card con ícono SVG ilustrativo, título y descripción. Al pie de la sección aparece un botón CTA que redirige al formulario de contacto.</p>
+
+  <h3>Proyectos (proyectos.html)</h3>
+  <p>Sección reservada para mostrar los proyectos realizados por el equipo. Actualmente muestra un mensaje de "próximamente" mientras se prepara el contenido.</p>
+
+  <h3>Contacto (contacto.html)</h3>
+  <p>Formulario de contacto con campos de nombre, email y mensaje, todos con validación HTML5 (<em>required</em>) y atributos de autocompletado. Incluye también la dirección de correo electrónico directa del estudio: <a href="mailto:hola@nexostudio.com">hola@nexostudio.com</a>.</p>
+
+  <!-- Document footer -->
+  <div class="doc-footer">
+    Nexo Studio · Grupo 02 · DDW1C26 · 2026
+  </div>
+
+</body>
+</html>

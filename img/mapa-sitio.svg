@@ -1,0 +1,70 @@
+<svg width="860" height="395" viewBox="0 0 860 395" xmlns="http://www.w3.org/2000/svg">
+  <rect width="860" height="395" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="430" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#003366">Mapa del Sitio — Nexo Studio</text>
+
+  <!-- INICIO -->
+  <rect x="300" y="34" width="260" height="62" rx="8" fill="#003366"/>
+  <text x="430" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Inicio</text>
+  <text x="430" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffbb77">index.html · Portfolio del equipo</text>
+
+  <!-- Trunk line -->
+  <line x1="430" y1="96" x2="430" y2="124" stroke="#003366" stroke-width="2"/>
+  <!-- Horizontal connector -->
+  <line x1="120" y1="124" x2="740" y2="124" stroke="#003366" stroke-width="2"/>
+  <!-- Drops to each section -->
+  <line x1="120" y1="124" x2="120" y2="144" stroke="#003366" stroke-width="2"/>
+  <line x1="430" y1="124" x2="430" y2="144" stroke="#003366" stroke-width="2"/>
+  <line x1="740" y1="124" x2="740" y2="144" stroke="#003366" stroke-width="2"/>
+
+  <!-- SERVICIOS -->
+  <rect x="25" y="144" width="190" height="62" rx="8" fill="#003366"/>
+  <text x="120" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Servicios</text>
+  <text x="120" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffbb77">servicios.html</text>
+
+  <!-- PROYECTOS -->
+  <rect x="335" y="144" width="190" height="62" rx="8" fill="#003366"/>
+  <text x="430" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Proyectos</text>
+  <text x="430" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffbb77">proyectos.html</text>
+
+  <!-- CONTACTO -->
+  <rect x="645" y="144" width="190" height="62" rx="8" fill="#003366"/>
+  <text x="740" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Contacto</text>
+  <text x="740" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffbb77">contacto.html</text>
+
+  <!-- Lines to sub-sections -->
+  <line x1="120" y1="206" x2="120" y2="236" stroke="#ff6600" stroke-width="1.5"/>
+  <line x1="430" y1="206" x2="430" y2="236" stroke="#ff6600" stroke-width="1.5"/>
+  <line x1="740" y1="206" x2="740" y2="236" stroke="#ff6600" stroke-width="1.5"/>
+
+  <!-- SERVICIOS sub-box -->
+  <rect x="20" y="236" width="200" height="122" rx="6" fill="#f0f4fa" stroke="#ff6600" stroke-width="1.5"/>
+  <text x="120" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#003366">Servicios ofrecidos</text>
+  <circle cx="37" cy="276" r="3" fill="#ff6600"/>
+  <text x="46" y="280" font-family="Arial, sans-serif" font-size="11" fill="#444">Diseño UX / UI</text>
+  <circle cx="37" cy="298" r="3" fill="#ff6600"/>
+  <text x="46" y="302" font-family="Arial, sans-serif" font-size="11" fill="#444">Desarrollo Front-end</text>
+  <circle cx="37" cy="320" r="3" fill="#ff6600"/>
+  <text x="46" y="324" font-family="Arial, sans-serif" font-size="11" fill="#444">User Research</text>
+  <circle cx="37" cy="342" r="3" fill="#ff6600"/>
+  <text x="46" y="346" font-family="Arial, sans-serif" font-size="11" fill="#444">Marketing Digital</text>
+
+  <!-- PROYECTOS sub-box -->
+  <rect x="330" y="236" width="200" height="62" rx="6" fill="#f0f4fa" stroke="#ff6600" stroke-width="1.5"/>
+  <text x="430" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#003366">Contenido</text>
+  <text x="430" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Próximamente</text>
+
+  <!-- CONTACTO sub-box -->
+  <rect x="635" y="236" width="210" height="92" rx="6" fill="#f0f4fa" stroke="#ff6600" stroke-width="1.5"/>
+  <text x="740" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#003366">Formulario de contacto</text>
+  <circle cx="652" cy="278" r="3" fill="#ff6600"/>
+  <text x="661" y="282" font-family="Arial, sans-serif" font-size="11" fill="#444">Nombre</text>
+  <circle cx="652" cy="300" r="3" fill="#ff6600"/>
+  <text x="661" y="304" font-family="Arial, sans-serif" font-size="11" fill="#444">Email</text>
+  <circle cx="652" cy="322" r="3" fill="#ff6600"/>
+  <text x="661" y="326" font-family="Arial, sans-serif" font-size="11" fill="#444">Mensaje</text>
+
+  <!-- Footer note -->
+  <text x="430" y="383" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">Nexo Studio · DDW1C26 · Grupo 02 · 2026</text>
+</svg>
