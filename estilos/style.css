@@ -7,13 +7,19 @@
     box-sizing: border-box;
 }
 
-/* --- Base del documento --- */
+/* --- Base del documento ---
+   position: relative convierte al body en el bloque contenedor del footer absoluto.
+   min-height: 100vh garantiza que el body ocupe toda la pantalla aunque el contenido sea corto.
+   padding-bottom: 80px evita que el footer absoluto tape el final del contenido (alto del footer). */
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     background-color: #ffffff;
     color: #1a1a1a;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 80px;
 }
 
 img {
@@ -22,11 +28,22 @@ img {
     display: block;
 }
 
-/* --- Header: logo a la izquierda, nav a la derecha usando float --- */
+/* --- Header: logo a la izquierda, nav a la derecha usando float ---
+   position: sticky mantiene el menú visible al hacer scroll (Posicionamiento Avanzado) */
 header {
     background-color: #003366;
     padding: 0 40px;
-    overflow: hidden; /* clearfix para los floats internos */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Clearfix con pseudo-elemento en lugar de overflow:hidden,
+   para que el menú desplegable mobile no quede recortado */
+header::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 header .logo {
@@ -134,8 +151,14 @@ main a:hover {
     text-decoration: underline;
 }
 
-/* --- Footer --- */
+/* --- Footer ---
+   position: absolute + bottom: 0 lo ancla al fondo del body (que tiene position: relative).
+   width: 100% asegura que ocupe todo el ancho sin importar el contenido. */
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #003366;
     padding: 28px 40px;
     text-align: center;
@@ -361,4 +384,113 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
     background-color: #cc5200;
+}
+
+/* --- Botón hamburguesa (oculto en escritorio, visible en mobile) --- */
+.hamburger {
+    display: none;
+    float: right;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 64px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+/* ================================================================
+   DISEÑO RESPONSIVE — Breakpoint 768px (dispositivos móviles)
+   Leyes de proximidad: elementos apilados con espacio generoso
+   ================================================================ */
+@media (max-width: 768px) {
+
+    /* -- Header: se adapta en altura y muestra el botón hamburguesa -- */
+    header {
+        padding: 0 20px;
+    }
+
+    header .logo {
+        font-size: 16px;
+        line-height: 56px;
+    }
+
+    .hamburger {
+        display: block;
+        line-height: 56px;
+    }
+
+    /* -- Menú de navegación: oculto por defecto, se muestra con clase .abierto -- */
+    nav {
+        display: none;
+        float: none;
+        position: absolute;
+        top: 56px;     /* justo debajo del header mobile */
+        left: 0;
+        width: 100%;
+        background-color: #002255;
+        z-index: 99;
+    }
+
+    nav.abierto {
+        display: block;
+    }
+
+    nav ul {
+        padding: 8px 0;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        line-height: 1;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* -- Contenido principal: padding reducido para pantallas chicas -- */
+    main {
+        padding: 32px 20px;
+    }
+
+    main h1 {
+        font-size: 26px;
+    }
+
+    main h2 {
+        font-size: 20px;
+        margin-top: 32px;
+    }
+
+    main p {
+        max-width: 100%;
+    }
+
+    /* -- Cards de portfolio: 1 por fila en mobile -- */
+    .portfolio-section {
+        font-size: 0;
+    }
+
+    .card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* -- Cards de servicios: 1 por fila en mobile -- */
+    .servicio-card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* -- Footer mobile: padding reducido y padding-bottom del body ajustado al nuevo alto (~65px) -- */
+    body {
+        padding-bottom: 65px;
+    }
+
+    footer {
+        padding: 20px;
+    }
 }
