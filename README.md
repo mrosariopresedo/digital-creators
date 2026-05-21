@@ -15,7 +15,7 @@ Sitio web grupal de la consultora **Nexo Studio**, desarrollado para la materia 
 | GAVILANES, Lucía | Diseñadora UI |
 | MARTINS, Valentina | Diseñadora UX |
 | PRESEDO VALENZUELA, María del Rosario | Desarrolladora Front-end |
-| RAIMONDO, Mora | Marketing |
+| RAIMONDO, Mora | Marketing Digital |
 | SAMA, Martina Sol | Research / Investigación |
 
 ---
@@ -52,13 +52,13 @@ Sitio web grupal de la consultora **Nexo Studio**, desarrollado para la materia 
 Página principal de Nexo Studio. Presenta la propuesta de valor de la consultora y un acceso directo al formulario de contacto mediante un botón CTA. Incluye la sección **Portfolio del Equipo**, con una card por integrante que muestra foto, nombre, rol y enlace al portfolio personal publicado en GitHub Pages.
 
 ### Servicios (`servicios.html`)
-Describe los cuatro servicios que ofrece la consultora: **Diseño UX/UI**, **Desarrollo Front-end**, **User Research** y **Marketing Digital**. Cada servicio se presenta en una card con ícono SVG ilustrativo, título y descripción. Al pie de la sección aparece un botón CTA que redirige al formulario de contacto.
+Describe los cuatro servicios que ofrece la consultora: **Diseño UX/UI**, **Desarrollo Front-end**, **User Research** y **Marketing Digital**. Cada servicio se presenta como una fila interactiva con número, título, descripción y stack de herramientas. Al hacer hover, la fila invierte sus colores y revela una fotografía ilustrativa. Al pie de la sección aparece un botón CTA que redirige al formulario de contacto.
 
 ### Proyectos (`proyectos.html`)
 Sección reservada para mostrar los proyectos realizados por el equipo. Actualmente muestra un mensaje de "próximamente" mientras se prepara el contenido.
 
 ### Contacto (`contacto.html`)
-Formulario de contacto con campos de nombre, email y mensaje, todos con validación HTML5 (`required`) y atributos de autocompletado. Incluye también la dirección de correo electrónico directa del estudio.
+Formulario de contacto con cinco campos: nombre, email, empresa/proyecto (opcional), servicio de interés y mensaje. Los campos obligatorios tienen validación HTML5 (`required`) y atributos de autocompletado. Incluye también la dirección de correo electrónico directa del estudio.
 
 ---
 
@@ -189,7 +189,7 @@ Para CSS todos los elementos HTML son cajas. Las propiedades de **padding** (esp
 - Las secciones tienen `padding` generoso en los ejes vertical y horizontal para generar el espacio en blanco que mejora la legibilidad, siguiendo la heurística de diseño minimalista de Nielsen.
 - El contenedor principal de cada sección tiene `max-width` y `margin: auto` para centrarse en pantalla.
 
-Al inicio del CSS se aplica `* { margin: 0; padding: 0; }` con el **selector universal** para eliminar los márgenes y paddings que distintos navegadores agregan por defecto, asegurando consistencia visual.
+La normalización de márgenes y paddings entre navegadores la gestiona **Tailwind CSS** a través de su capa base (Preflight), que aplica un reset consistente sobre todos los elementos. El archivo `style.css` propio no necesita incluir un reset manual.
 
 **Estilos en cascada y especificidad**
 

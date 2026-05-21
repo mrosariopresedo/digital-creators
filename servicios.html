@@ -10,15 +10,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: {
-        colors: {
-          cream: { DEFAULT: '#F2EDE3', soft: '#ECE6D8', deep: '#E3DBC8' },
-          ink:   { DEFAULT: '#15233F', soft: '#2D3A56', mute: '#5C6680', faint: '#8E96A9' },
-          accent:{ DEFAULT: '#E85F25', deep: '#C9491A', soft: '#F5C8B0' },
-          line:  { DEFAULT: '#C9C0AC', soft: '#DDD4BE' },
+      theme: {
+        extend: {
+          colors: {
+            cream: { DEFAULT: '#F2EDE3', soft: '#ECE6D8', deep: '#E3DBC8' },
+            ink:   { DEFAULT: '#15233F', soft: '#2D3A56', mute: '#5C6680', faint: '#8E96A9' },
+            accent:{ DEFAULT: '#E85F25', deep: '#C9491A', soft: '#F5C8B0' },
+            line:  { DEFAULT: '#C9C0AC', soft: '#DDD4BE' },
+          },
+          fontFamily: {
+            sans: ['Geist', 'system-ui', 'sans-serif'],
+            mono: ['"Geist Mono"', 'monospace'],
+          },
         },
-        fontFamily: { sans: ['Geist','system-ui','sans-serif'], mono: ['"Geist Mono"','monospace'] },
-      } },
+      },
     };
   </script>
   <link rel="stylesheet" href="estilos/style.css">
@@ -49,7 +54,7 @@
   <main class="relative z-10">
 
     <!-- ============ INTRO ============ -->
-    <section class="px-[clamp(20px,5vw,56px)] pt-12 pb-24 max-w-[1280px] mx-auto" data-screen-label="Servicios intro">
+    <section class="px-[clamp(20px,5vw,56px)] pt-12 pb-24 max-w-[1280px] mx-auto" data-screen-label="Intro">
       <div class="reveal flex flex-wrap justify-between items-center gap-5 pb-5 border-b border-line-soft font-mono text-[11px] tracking-[0.1em] uppercase text-ink-mute">
         <span>Servicios · Nexo Studio</span>
         <span>04 disciplinas · 01 equipo</span>
@@ -96,7 +101,7 @@
           <h3 class="font-sans font-medium text-[clamp(28px,3.6vw,56px)] tracking-[-0.03em] leading-none">Diseño UX / UI</h3>
           <p class="servicio-desc text-sm text-ink-mute leading-[1.5] max-w-[440px] transition-colors">Interfaces intuitivas, accesibles y atractivas. Trabajamos centrados en el usuario para que cada experiencia fluya sin fricción.</p>
           <span class="servicio-meta font-mono text-[11px] uppercase tracking-[0.08em] text-ink-mute transition-colors">Figma · Auditoría · Sistemas</span>
-          <div class="servicio-img"><img src="img/dise%C3%B1o%20ux.jpg" alt="" loading="lazy"></div>
+          <div class="servicio-img"><img src="img/dise%C3%B1o%20ux.jpg" alt="Imagen de diseño UX / UI" loading="lazy"></div>
         </article>
 
         <article class="reveal servicio-row grid grid-cols-[80px_1fr_1.2fr_auto] gap-5 items-center py-8 border-b border-line-soft cursor-pointer" data-delay="1">
@@ -104,7 +109,7 @@
           <h3 class="font-sans font-medium text-[clamp(28px,3.6vw,56px)] tracking-[-0.03em] leading-none">Desarrollo front-end</h3>
           <p class="servicio-desc text-sm text-ink-mute leading-[1.5] max-w-[440px] transition-colors">Sitios robustos y escalables con tecnologías modernas. Velocidad, responsive y código que se mantiene en el tiempo.</p>
           <span class="servicio-meta font-mono text-[11px] uppercase tracking-[0.08em] text-ink-mute transition-colors">HTML · CSS · JS · React</span>
-          <div class="servicio-img"><img src="img/front%20end.jpg" alt="" loading="lazy"></div>
+          <div class="servicio-img"><img src="img/front%20end.jpg" alt="Imagen de desarrollo front-end" loading="lazy"></div>
         </article>
 
         <article class="reveal servicio-row grid grid-cols-[80px_1fr_1.2fr_auto] gap-5 items-center py-8 border-b border-line-soft cursor-pointer" data-delay="2">
@@ -112,7 +117,7 @@
           <h3 class="font-sans font-medium text-[clamp(28px,3.6vw,56px)] tracking-[-0.03em] leading-none">User research</h3>
           <p class="servicio-desc text-sm text-ink-mute leading-[1.5] max-w-[440px] transition-colors">Analizamos comportamientos reales para tomar decisiones basadas en datos. Optimizamos usabilidad en plataformas complejas.</p>
           <span class="servicio-meta font-mono text-[11px] uppercase tracking-[0.08em] text-ink-mute transition-colors">Entrevistas · Testing · Análisis</span>
-          <div class="servicio-img"><img src="img/user%20research.jpg" alt="" loading="lazy"></div>
+          <div class="servicio-img"><img src="img/user%20research.jpg" alt="Imagen de user research" loading="lazy"></div>
         </article>
 
         <article class="reveal servicio-row grid grid-cols-[80px_1fr_1.2fr_auto] gap-5 items-center py-8 border-b border-line-soft cursor-pointer" data-delay="3">
@@ -120,7 +125,7 @@
           <h3 class="font-sans font-medium text-[clamp(28px,3.6vw,56px)] tracking-[-0.03em] leading-none">Marketing digital</h3>
           <p class="servicio-desc text-sm text-ink-mute leading-[1.5] max-w-[440px] transition-colors">Estrategias de Meta Ads y posicionamiento digital orientadas a resultados. Visibilidad para proyectos que quieren crecer.</p>
           <span class="servicio-meta font-mono text-[11px] uppercase tracking-[0.08em] text-ink-mute transition-colors">Ads · SEO · Estrategia</span>
-          <div class="servicio-img"><img src="img/marketing%20digital.jpg" alt="" loading="lazy"></div>
+          <div class="servicio-img"><img src="img/marketing%20digital.jpg" alt="Imagen de marketing digital" loading="lazy"></div>
         </article>
 
       </div>
@@ -170,7 +175,7 @@
 
   </main>
 
-  <!-- Footer (mismo bloque) -->
+  <!-- ============ FOOTER ============ -->
   <footer class="relative z-10 mt-16 border-t border-line-soft bg-cream-soft px-[clamp(20px,5vw,56px)] pt-16 pb-6" data-screen-label="Footer">
     <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1fr] gap-12 pb-12 border-b border-line-soft">
       <div>
@@ -200,7 +205,7 @@
           <li><a href="servicios.html" class="text-sm text-ink hover:text-accent transition">Diseño UX/UI</a></li>
           <li><a href="servicios.html" class="text-sm text-ink hover:text-accent transition">Front-end</a></li>
           <li><a href="servicios.html" class="text-sm text-ink hover:text-accent transition">User Research</a></li>
-          <li><a href="servicios.html" class="text-sm text-ink hover:text-accent transition">Marketing</a></li>
+          <li><a href="servicios.html" class="text-sm text-ink hover:text-accent transition">Marketing Digital</a></li>
         </ul>
       </div>
       <div>
