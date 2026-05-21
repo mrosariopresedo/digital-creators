@@ -64,140 +64,196 @@ Formulario de contacto con campos de nombre, email y mensaje, todos con validaci
 
 ## 6. Contenido de la materia aplicado
 
-Esta sección documenta cómo el sitio de Nexo Studio pone en práctica los conceptos enseñados en Diseño y Desarrollo Web 1 (DDW1C26 - UADE, 2026).
+Esta sección documenta cómo el sitio de Nexo Studio aplica los conceptos enseñados en Diseño y Desarrollo Web 1 (DDW1C26 - UADE, 2026).
 
 ---
 
-### 6.1 Leyes de Gestalt
+### 6.1 Leyes de Gestalt y principios de diseño visual
 
-Las Leyes de Gestalt describen cómo el cerebro humano organiza e interpreta los elementos visuales. El sitio las aplica de la siguiente manera:
+Las Leyes de Gestalt explican cómo el cerebro humano percibe y organiza los elementos visuales en una composición. Junto con los principios de diseño CRAP (Contraste, Repetición, Alineación y Proximidad), son la base de las decisiones visuales del sitio.
 
 **Proximidad**
-Los elementos relacionados se ubican físicamente cerca. En la sección Equipo, cada card agrupa foto, número de orden, nombre, rol y enlace al portfolio como una unidad perceptual. En el footer, los ítems de navegación, servicios y contacto se organizan en columnas separadas para que cada grupo se lea como un bloque independiente.
+Los elementos relacionados se ubican físicamente cerca para que se perciban como una unidad. En la sección Equipo, cada card agrupa foto, nombre, rol y enlace al portfolio. En el footer, los ítems de navegación, servicios y contacto se organizan en columnas separadas para que cada grupo se lea de forma independiente.
 
 **Similitud**
-Elementos con la misma función comparten la misma forma visual. Las cinco cards del equipo son estructuralmente idénticas (mismo aspect-ratio `3/4`, mismo radio `rounded-[10px]`, mismo orden tipográfico). Las cuatro filas de servicios repiten la misma grilla de cuatro columnas (número → título → descripción → etiqueta de tecnologías), señalando al usuario que pertenecen a la misma categoría.
+Los elementos con la misma función tienen la misma forma visual. Las cinco cards del equipo son estructuralmente idénticas (mismas proporciones, mismo orden tipográfico, mismo estilo de imagen). Las cuatro filas de servicios repiten la misma estructura, indicando visualmente que pertenecen a una misma categoría.
 
-**Continuidad**
-El layout usa líneas divisoras horizontales (`border-b border-line-soft`) que guían la lectura de arriba a abajo de forma ininterrumpida. En Servicios, la barra superior negra sobre la lista y las líneas entre filas crean un flujo visual continuo. Los botones CTA al final de cada sección funcionan como "puente" hacia la siguiente acción.
-
-**Figura-Fondo**
-El isotipo (la X) aprovecha el fondo crema del sitio como tercer elemento activo: el círculo central recibe el color `#F2EDE3` del fondo, haciendo que el punto naranja interior "flote" sobre la intersección. El header sticky usa `backdrop-blur-md` y opacidad `bg-cream/85` para mantener legibilidad sin romper la relación figura-fondo con el contenido de atrás.
+**Figura y fondo**
+El isotipo (la X) aprovecha el color de fondo del sitio como tercer elemento activo: el círculo central toma el color crema del fondo, haciendo que el punto naranja "flote" sobre la intersección de los dos trazos. Esto aplica la relación figura-fondo para que el logotipo sea reconocible con una forma muy simple.
 
 **Cierre**
-El logotipo forma una X cerrada y reconocible aunque sus dos trazos sean de colores distintos. El cerebro completa la forma y la identifica como una unidad. La animación de entrada (`x-draw`) refuerza este cierre construyendo cada trazo desde el centro.
+El logotipo forma una X reconocible aunque sus dos trazos sean de colores distintos. El cerebro completa la forma y la identifica como una unidad cerrada, lo que lo hace memorable.
 
-**Pregnancia (Ley de la Buena Forma)**
-El sistema de diseño prioriza formas simples y regulares: el isotipo es dos líneas y un círculo; los botones son píldoras uniformes (`rounded-full`); las cards tienen bordes redondeados consistentes. La paleta de tres colores (crema, tinta, acento) reduce la carga cognitiva y hace que cada elemento sea fácilmente memorizable.
+**Pregnancia (buena forma)**
+El sistema de diseño prioriza formas simples y regulares: el isotipo es solo dos líneas y un círculo; los botones son rectángulos con bordes redondeados uniformes; las cards siguen el mismo patrón en todo el sitio. La paleta reducida de tres colores refuerza esta simplicidad.
 
-**Región Común**
-Cada sección del sitio está delimitada por bordes o cambios de fondo que la convierten en una región visualmente unificada. El header sticky con borde inferior, el footer con borde superior y el bloque de métricas con borde superior e inferior son ejemplos de regiones comunes claramente definidas.
+**Contraste (CRAP)**
+Se usó contraste entre el color oscuro (`#15233F`) y el fondo crema (`#F2EDE3`) para garantizar la legibilidad del texto. El naranja (`#E85F25`) se reserva exclusivamente para las llamadas a la acción y detalles de énfasis, creando un contraste que guía la mirada del usuario hacia las acciones importantes.
+
+**Repetición (CRAP)**
+Los mismos colores, tipografías, tamaños de fuente y estilos de botón se repiten en las cuatro páginas del sitio. Esto genera coherencia visual y le da al usuario la sensación de estar dentro del mismo sitio al navegar.
+
+**Alineación (CRAP)**
+Todos los bloques de contenido están alineados a una grilla. Los textos dentro de cada sección comparten ejes comunes, lo que da orden y prolijidad al diseño general.
+
+**Jerarquía visual**
+Cada página tiene un único título principal (`<h1>`) de gran tamaño que comunica el mensaje más importante. Las secciones usan `<h2>` y los subtítulos internos `<h3>`, siguiendo la jerarquía de encabezados sin saltear niveles.
 
 ---
 
 ### 6.2 Tipografía
 
-El sitio aplica principios de jerarquía tipográfica con una escala de tres familias de fuente con funciones claramente diferenciadas:
+Aplicamos una combinación de dos familias tipográficas con roles diferenciados, importadas desde Google Fonts.
 
-| Familia | Uso | Justificación |
+| Familia | Tipo | Uso en el sitio |
 |---|---|---|
-| **Geist** (sans-serif) | Cuerpo, títulos, botones | Máxima legibilidad en pantalla; trazos abiertos y espaciado optimizado para digital |
-| **Geist Mono** (monoespaciada) | Etiquetas, numeración, metadatos | Contraste textural con el sans; asocia visualmente el contenido con datos técnicos o de sistema |
-| **Instrument Serif** (serif itálica) | Inicial "e" del wordmark del footer | Detalle editorial puntual; rompe la uniformidad geométrica con un trazo humanista |
+| **Geist** | Sans-serif | Títulos, párrafos, botones |
+| **Geist Mono** | Monoespaciada | Etiquetas de categoría, numeración, metadatos |
 
-La jerarquía de tamaños usa `clamp()` para escala fluida (sin saltos abruptos entre dispositivos):
+**Decisiones tipográficas:**
 
-- `h1` → `clamp(56px, 11vw, 160px)` - titular dominante
-- `h2` → `clamp(40px, 6vw, 88px)` - secciones
-- Párrafo lead → `clamp(20px, 2.4vw, 28px)` - lectura cómoda en cualquier viewport
-- Botones → `15px` fijo - acción clara y consistente
-- Etiquetas mono → `10–11px` uppercase con `letter-spacing: 0.1em` - metadatos subordinados
-
-El tracking negativo en los títulos grandes (`tracking-[-0.04em]`) y el `leading` ajustado (`leading-[0.96]` en h1) son decisiones tipográficas deliberadas para lograr bloques de texto compactos y expresivos.
+- Se eligieron fuentes **sans-serif** para el cuerpo del texto por su mayor legibilidad en pantalla respecto de las fuentes serif, que están más pensadas para impresión.
+- La fuente **monoespaciada** en etiquetas y metadatos genera un contraste tipográfico que ayuda a diferenciar visualmente los distintos tipos de información (contenido principal vs. datos secundarios).
+- Se definió una jerarquía clara de tamaños: los títulos `<h1>` son notablemente más grandes que los `<h2>`, y estos a su vez más grandes que el texto de párrafo. Esto responde al principio de jerarquía visual.
+- El **interlineado** (`line-height`) en los párrafos se ajustó a aproximadamente 1.35 veces el tamaño de la fuente para facilitar la lectura.
+- Las etiquetas de categoría usan `text-transform: uppercase` (mayúsculas) y un `letter-spacing` mayor para reforzar visualmente su función subordinada respecto al título principal.
+- Los títulos grandes tienen un `letter-spacing` levemente negativo (tracking ajustado) para que los bloques de texto se lean como unidades compactas, algo habitual en diseño editorial.
 
 ---
 
 ### 6.3 Teoría del color
 
-La paleta es intencionalmente mínima: tres colores base con variantes tonal, sin mezcla arbitraria.
+La paleta del sitio fue definida con tres colores base, expresados en formato **hexadecimal** (sistema de base 16, valores del 00 al FF para cada canal de rojo, verde y azul del modelo **RGB**).
 
-| Token | HEX | Rol |
+| Color | Valor HEX | Uso |
 |---|---|---|
-| `cream` | `#F2EDE3` | Fondo global; cálido, no blanco puro para reducir fatiga visual |
-| `ink` | `#15233F` | Texto y elementos de UI primarios; azul muy oscuro (en lugar de negro puro) |
-| `accent` | `#E85F25` | Color de acción único: CTAs, énfasis, detalles del logotipo |
+| Crema | `#F2EDE3` | Color de fondo del sitio |
+| Tinta (azul oscuro) | `#15233F` | Texto principal y elementos de UI |
+| Acento (naranja) | `#E85F25` | Botones principales, énfasis, detalles del logotipo |
 
-**Decisiones de contraste:** la combinación `ink` sobre `cream` cumple con relación de contraste AA del estándar WCAG. `cream` sobre `ink` (botón oscuro) y `white` sobre `accent` (botón naranja) también superan el umbral de legibilidad mínimo.
+**Justificación de las decisiones de color:**
 
-**Uso del color como señal:** el naranja `accent` aparece exclusivamente en elementos interactivos o de alta jerarquía (botón principal, subrayado del hero, punto del logotipo, hover de links). Esta restricción de uso convierte al color en un sistema de señales, no en decoración.
+Se eligió el **azul oscuro** en lugar del negro puro para el texto porque genera un contraste suficiente con el fondo sin la dureza del negro absoluto, lo que mejora la legibilidad y da una sensación más profesional, en línea con la psicología del color azul (confianza, profesionalismo).
 
-**Textura sutil:** se agrega una capa de grano SVG con `mix-blend-mode: multiply` sobre todo el fondo, suavizando el blanco digital y dotando al sitio de una calidad impresa/editorial sin romper ningún contraste.
+El **naranja** responde a la psicología del color: es un color asociado a la innovación, modernidad y dinamismo, que se alinea con el perfil de una consultora de tecnología y diseño. Siguiendo el principio de que los colores deben tener un rol claro, el naranja se usa exclusivamente para los botones de llamada a la acción (CTA) y los detalles del logotipo, para que actúe como señal visual clara sin saturar el diseño.
+
+El **fondo crema** (en lugar del blanco puro `#FFFFFF`) suaviza la experiencia visual y da al sitio un tono más cálido. El blanco puro puede generar fatiga visual en pantallas; el crema lo reduce.
+
+Los tres colores funcionan como una paleta complementaria equilibrada: fondo neutro cálido, texto oscuro frío y acento cálido.
 
 ---
 
 ### 6.4 HTML semántico
 
-El código usa etiquetas de significado estructural en lugar de `<div>` genéricos cuando el contenido lo justifica:
+La estructura de cada página usa las **etiquetas semánticas de HTML5** en lugar de `<div>` genéricos, siguiendo las buenas prácticas vistas en clase.
 
 ```
-<header>    → cabecera del sitio con navegación
+<header>    → encabezado del sitio con el logo y el menú de navegación
 <nav>       → menú de navegación principal
 <main>      → contenido principal de cada página
 <section>   → bloques temáticos (Hero, Equipo, Servicios, Proceso, etc.)
-<article>   → unidad de contenido independiente (cards de servicios, cards del equipo)
-<footer>    → pie de página con links y datos del estudio
-<h1>–<h3>   → jerarquía de encabezados sin saltos de nivel
-<a>         → todos los enlaces con href real y texto descriptivo
+<article>   → unidades de contenido independientes (cards del equipo, filas de servicios)
+<footer>    → pie de página con enlaces y datos del estudio
+<h1>-<h3>   → jerarquía de encabezados sin saltear niveles
+<a>         → hipervínculos con atributo href y texto descriptivo
 ```
 
-**Accesibilidad:**
-- `lang="es"` en `<html>` para lectores de pantalla.
-- `alt` descriptivo en todas las imágenes de personas (e.g. `"Foto de Rosario Presedo"`); `alt=""` en imágenes puramente decorativas.
-- `aria-label="Abrir menú"` en el botón hamburger (sin texto visible).
-- `aria-hidden="true"` en los SVG decorativos del isotipo que no aportan información.
-- `rel="noopener noreferrer"` en todos los links externos (`target="_blank"`).
-- `<meta name="description">` con descripción única en cada página para SEO.
+El uso de etiquetas semánticas mejora el **posicionamiento SEO** (los buscadores le dan más jerarquía al contenido dentro de `<h1>` que al que está en un `<p>`) y permite que los **lectores de pantalla** interpreten correctamente la estructura del sitio.
 
-**Formulario (`contacto.html`):**
-- Tipo semántico correcto en cada campo (`type="email"`, `type="text"`, `<textarea>`).
-- Atributo `required` en todos los campos obligatorios.
-- Atributos `autocomplete` para mejorar la experiencia en móviles.
-- Validación nativa HTML5 antes de cualquier submit.
+**Atributos de accesibilidad aplicados:**
+- `lang="es"` en `<html>` para indicar el idioma a los lectores de pantalla.
+- Atributo `alt` con texto descriptivo en todas las imágenes de personas (ej.: `"Foto de Rosario Presedo"`).
+- `aria-label="Abrir menú"` en el botón hamburger, que no tiene texto visible.
+- `aria-hidden="true"` en los SVG decorativos del logotipo, para que no sean leídos como contenido.
+- Todos los enlaces externos usan `target="_blank"` acompañado de `rel="noopener noreferrer"`.
+- Cada página tiene su propio `<title>` y `<meta name="description">` para SEO.
 
----
-
-### 6.5 CSS y diseño responsive
-
-**Framework y arquitectura:**
-El sitio combina **Tailwind CSS** (CDN con configuración personalizada de tokens) con un archivo `estilos/style.css` complementario. Las clases utility de Tailwind manejan layout, espaciado y tipografía; el CSS custom solo cubre lo que Tailwind no puede expresar: animaciones con `@keyframes`, el hover complejo de la lista de servicios, y la textura de grano.
-
-**Responsive design:**
-- Enfoque *mobile-first*: los breakpoints se definen con los prefijos `sm:` y `md:` de Tailwind.
-- El menú de navegación colapsa a un botón hamburger en viewports menores a `640px`, controlado por JavaScript (`menu.js`) sin ninguna dependencia externa.
-- Las grillas se adaptan progresivamente: por ejemplo, el equipo pasa de `grid-cols-1` → `sm:grid-cols-2` → `lg:grid-cols-5`.
-- Las imágenes flotantes de hover en la lista de servicios se ocultan con `display: none` en viewports menores a `960px` para evitar solapamientos.
-
-**Layout:**
-- **CSS Grid** para la estructura de páginas (secciones en dos o tres columnas con proporciones `[200px_1fr]`, `[1.2fr_1fr]`, etc.).
-- **Flexbox** para componentes internos (header, cards, botones, filas de navegación).
-- `max-w-[1280px] mx-auto` como contenedor máximo centrado en todas las secciones.
-
-**Tipografía fluida:**
-El uso de `clamp(min, val, max)` en tamaños y padding elimina la necesidad de breakpoints tipográficos explícitos. El padding horizontal también es fluido: `px-[clamp(20px,5vw,56px)]`.
-
-**Animaciones e interacciones:**
-- `IntersectionObserver` (`interactions.js`) dispara la clase `.in` sobre los elementos `.reveal` al entrar al viewport, produciendo una entrada con `opacity` + `translateY`.
-- La animación del logo (`x-draw`, `dot-in`) usa `animation-fill-mode: both` para que el estado inicial no haga flash.
-- El hover de la lista de servicios invierte los colores de la fila mediante un `::before` pseudo-elemento con `transform: scaleY(0→1)`, sin necesidad de cambiar clases con JS.
-- El header sticky aplica `backdrop-filter: blur` con fallback transparente para navegadores sin soporte.
+**Formulario de contacto (`contacto.html`):**
+- Cada campo usa el tipo de `<input>` correcto: `type="email"` para el correo, `type="text"` para el nombre, `<textarea>` para el mensaje.
+- Todos los campos tienen el atributo `required` para activar la validación nativa de HTML5 antes del envío.
+- Los campos tienen `placeholder` para orientar al usuario sobre qué información ingresar.
+- Los `<label>` están correctamente asociados a cada campo mediante el atributo `for`.
 
 ---
 
-### 6.6 Principios de UX aplicados
+### 6.5 CSS: modelo de caja, estilos en cascada y diseño responsive
 
-- **Jerarquía visual clara:** en cada página existe un único `h1` dominante que comunica el valor principal; el resto de los elementos se subordinan en tamaño y peso.
-- **CTA único y repetido:** cada página termina con un único llamado a la acción (contacto o siguiente paso), evitando la parálisis por elección.
-- **Feedback inmediato:** el formulario de contacto muestra un estado de éxito visual (`fade-up`) tras el envío, sin recargar la página.
-- **Estado activo en navegación:** el link de la página actual recibe clases `bg-ink text-cream` automáticamente mediante JS, orientando al usuario dentro del sitio.
-- **Consistencia:** header, footer y sistema de colores son idénticos en todas las páginas, reduciendo la carga cognitiva de navegación.
-- **Legibilidad en movimiento:** las transiciones usan `cubic-bezier(.2,.8,.2,1)` (ease-out suave) en lugar de `ease` estándar, para que los elementos desaceleren de forma orgánica y no parezcan cortarse.
+**Arquitectura del CSS**
+
+El sitio usa **Tailwind CSS** vinculado desde un CDN como framework principal, complementado con el archivo `estilos/style.css` para animaciones y efectos de hover que requieren `@keyframes` o pseudo-elementos complejos. Esta separación mantiene el principio de distinguir la estructura (HTML) de la presentación (CSS).
+
+**Modelo de caja (Box Model)**
+
+Para CSS todos los elementos HTML son cajas. Las propiedades de **padding** (espacio entre el contenido y el borde), **border** (el borde) y **margin** (espacio externo entre cajas) se aplicaron de forma consistente en todo el sitio. Algunos ejemplos concretos:
+- Los botones tienen `padding` que define su tamaño interior, sin necesidad de fijar un ancho arbitrario.
+- Las secciones tienen `padding` generoso en los ejes vertical y horizontal para generar el espacio en blanco que mejora la legibilidad, siguiendo la heurística de diseño minimalista de Nielsen.
+- El contenedor principal de cada sección tiene `max-width` y `margin: auto` para centrarse en pantalla.
+
+Al inicio del CSS se aplica `* { margin: 0; padding: 0; }` con el **selector universal** para eliminar los márgenes y paddings que distintos navegadores agregan por defecto, asegurando consistencia visual.
+
+**Estilos en cascada y especificidad**
+
+Cuando hay reglas que se solapan, CSS aplica la de mayor especificidad o, ante igual especificidad, la que está más abajo en el archivo (la que entró última). El archivo `style.css` se vincula con `<link rel="stylesheet" href="estilos/style.css">` en el `<head>` de cada página, siguiendo la forma recomendada (hoja de estilo externa).
+
+**Propiedad `display` y comportamiento de cajas**
+
+- El menú de navegación usa `display: flex` para alinear los ítems en línea horizontal.
+- Las grillas de cards usan `display: grid` con columnas que se adaptan al ancho disponible.
+- El botón hamburger usa `display: none` en pantallas grandes y se muestra solo en mobile con `display: block`.
+
+**Pseudoclases y estados de los vínculos**
+
+Los vínculos del menú y los botones tienen estilos diferenciados para `:hover`, cambiando color de fondo o texto al pasar el cursor para dar feedback visual al usuario. Como se vio en clase, los vínculos no heredan el color del texto global, por lo que sus estilos se definen explícitamente.
+
+**Animaciones y transiciones**
+
+Se usaron `@keyframes` y la propiedad `transition` para los efectos visuales:
+- El subrayado naranja del título principal se dibuja de izquierda a derecha al cargar la página.
+- Los elementos tienen una entrada suave con `opacity` y desplazamiento vertical cuando aparecen en pantalla, activada con JavaScript.
+- El hover de las filas de servicios invierte colores de fondo y texto con una animación de `transform`.
+- El logotipo tiene una animación de entrada que construye los trazos de la X en secuencia.
+
+**Diseño responsive (Mobile First)**
+
+El sitio fue pensado con criterio **mobile first**: primero se define cómo se ve en pantalla pequeña y luego se agregan estilos para pantallas más grandes mediante **media queries** (puntos de quiebre o breakpoints). Tailwind usa los prefijos `sm:`, `md:` y `lg:` para esto.
+
+Ejemplos concretos:
+- En pantallas pequeñas el menú colapsa a un botón hamburger (☰); en pantallas medianas y grandes se muestra el menú horizontal completo.
+- La grilla del equipo pasa de 1 columna en mobile, a 2 en tablet, y a 5 en escritorio.
+- Las imágenes que aparecen al hacer hover en los servicios se ocultan en pantallas pequeñas para evitar solapamientos.
+
+---
+
+### 6.6 UX/UI y heurísticas de Nielsen
+
+El diseño del sitio responde a los principios de **Experiencia de Usuario (UX)** e **Interfaz de Usuario (UI)** vistos en clase, y fue evaluado tomando como referencia las **10 heurísticas de usabilidad de Jakob Nielsen**.
+
+**Público objetivo**
+Antes de diseñar se definió el público objetivo: equipos y empresas que buscan servicios de diseño y desarrollo web. Las decisiones de tono, colores y tipografía responden a ese perfil.
+
+**Wireframe y arquitectura de información**
+Antes de programar se planificó el mapa del sitio (incluido en la sección 4 de este README) y la estructura de cada página, definiendo qué secciones incluir y en qué orden. El sitio tiene 4 páginas (`index.html`, `servicios.html`, `proyectos.html`, `contacto.html`) con una navegación clara entre ellas.
+
+**Heurísticas de Nielsen aplicadas:**
+
+1. **Visibilidad del estado del sistema:** el link de la página activa en el menú cambia de estilo para que el usuario siempre sepa en qué sección está.
+
+2. **Relación entre el sistema y el mundo real:** todos los textos están escritos en lenguaje claro y cotidiano. Los íconos usados (flechas, logotipo) siguen convenciones visuales conocidas.
+
+3. **Control y libertad del usuario:** el header con el menú de navegación está siempre visible en la parte superior (posición `sticky`), permitiendo moverse a cualquier sección sin perder contexto.
+
+4. **Consistencia y estándares:** se usó el botón hamburger en mobile como estándar reconocible. Los colores de los botones son consistentes en todo el sitio.
+
+5. **Prevención de errores:** el formulario de contacto tiene los campos marcados como `required` y usa `type="email"` para que el navegador valide el formato antes de permitir el envío. Esto previene errores comunes.
+
+6. **Reconocimiento en lugar de recuerdo:** la navegación es visible en todo momento y las secciones tienen etiquetas descriptivas para que el usuario no tenga que memorizar la estructura del sitio.
+
+7. **Estética y diseño minimalista:** el sitio aplica el principio de que "menos es más". Usa espacio en blanco generoso (con `padding` y `margin` amplios entre secciones) y cada pantalla comunica una sola idea principal, evitando la sobrecarga de información.
+
+8. **Ayudar a reconocer y recuperarse de errores:** el formulario muestra un mensaje de confirmación visual cuando el envío es exitoso, y valida los campos antes del submit para orientar al usuario si falta información.
+
+**Coherencia visual**
+El header, footer y sistema de colores son idénticos en las cuatro páginas del sitio. Esta consistencia es fundamental en UX porque reduce la carga cognitiva del usuario y refuerza la identidad de la marca.
+
+**Call to Action (CTA)**
+Cada página termina con un único llamado a la acción claro (contacto o paso siguiente), sin sobrecargar al usuario con múltiples opciones simultáneas.
